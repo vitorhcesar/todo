@@ -47,22 +47,22 @@ export default function Todo( {index, desc, feito, todos, setTodos}:  todo) {
 
     if(feito){
         return (
-            <li className='flex gap-3 w-1/2 items-center justify-between p-4 bg-purple-200 rounded-lg transition-all'>
+            <li className='flex gap-3 w-3/4 md:w-1/2 items-center justify-between p-4 bg-purple-200 rounded-lg transition-all'>
                 <div className='flex items-center gap-2'>
                     <input type="checkbox" name={desc} checked={feito} onChange={changeCheck} />
-                    <p className='text-3xl text-slate-600 line-through'>{desc}</p>
+                    <p className='text-sm lg:text-3xl text-slate-600 line-through'>{desc}</p>
                 </div>
-                <button onClick={() => eraseTodo()}><BsTrash3Fill className='text-3xl self-end text-slate-600 hover:text-slate-800 transition-all' /></button>
+                <button onClick={() => eraseTodo()}><BsTrash3Fill className='text-md lg:text-3xl self-end text-slate-600 hover:text-slate-800 transition-all' /></button>
             </li>
         );
     } else {
         return (
-            <li className='flex gap-3 w-1/2 items-center justify-between p-4 bg-purple-400 rounded-lg transition-all'>
+            <li className='flex gap-3 w-3/4 md:w-1/2 items-center justify-between p-4 bg-purple-400 rounded-lg transition-all'>
                 <div className='flex items-center gap-2'>
                     <input type="checkbox" name={desc} checked={feito} onChange={changeCheck} />
-                    <p className='text-3xl text-slate-50'>{desc}</p>
+                    <p className='text-sm lg:text-3xl text-slate-50'>{desc}</p>
                 </div>
-                <button onClick={() => eraseTodo()}><BsTrash3Fill className='text-3xl self-end text-slate-100 hover:text-slate-400 transition-all' /></button>
+                <button onClick={() => eraseTodo()}><BsTrash3Fill className='text-md lg:text-3xl self-end text-slate-100 hover:text-slate-400 transition-all' /></button>
             </li>
         );
     }
